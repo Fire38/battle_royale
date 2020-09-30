@@ -1,0 +1,76 @@
+html, body {
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    height: 100%;
+  }
+
+#app{
+    height: 100%;
+    
+}
+
+.container-fluid{
+    height: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+
+}
+
+#mainframe{
+    height: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+    color: rgb(196, 196, 5);
+}
+
+
+.navbar-dark .navbar-nav .nav-link{
+    color: rgb(196, 196, 5);
+    font-weight: bold;
+}
+
+#navbar{
+    height: 60px
+}
+
+#login-breadcrumb{
+    background-color: #444c53;
+
+}
+
+#login-breadcrumb li a{
+    color: rgb(196, 196, 5);
+    font-weight: bold;
+}
+
+a#logout:hover{
+    cursor: pointer;
+}
+
+input.btn, a.btn, button.btn {
+    background-color: #343a40;
+    border: 1px solid #444c53;
+    color: rgb(196, 196, 5);
+    font-weight: bold;
+}
+
+#preview-game-card{
+    background-color: #343a40;
+    border-radius: 20px;
+}
+
+#preview-game-header{
+    font-weight: bold;
+}
+
+#preview-game-body{
+    background-color: #444c53;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+#invite-table{
+    color: rgb(196, 196, 5);
+    border: 0px solid;
+}
