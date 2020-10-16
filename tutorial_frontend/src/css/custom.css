@@ -1,0 +1,21 @@
+body{
+    background-color: black;
+}
+
+
+#statusBar{
+    height: 70px;
+    background-color: #32383e;
+    font-size: 40px;
+    color: gold;
+    font-weight: bold;
+
+}
+
+.dot {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  #mapid { height: 180px; }

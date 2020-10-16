@@ -50,7 +50,6 @@ class LogoutAndBlacklistRefreshTokenForUserView(APIView):
 class GetUser(APIView):
 
     def get(self, request):
-        print(request.user)
         serializer = CustomUserSerializer(request.user)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -68,7 +67,6 @@ class GetFutureGames(APIView):
 
 class GetTeam(APIView):
     def get(self, request):
-        print(request.user)
         serializer = TeamSerializer(request.user.team)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
@@ -96,7 +94,6 @@ class AsignCaptain(APIView):
         member_id = request.data['id']
         try:
             captain = Captain.objects.get(user=request.user, team=request.user.team)
-            print('tut')
 
             future_captain = CustomUser.objects.get(id=member_id)
         except:
@@ -137,7 +134,6 @@ class InviteMember(APIView):
 class GetInviteList(APIView):
     def post(self, request):
         invite_list = InviteMemberToTeam.objects.filter(invite_to=request.user)
-        print(invite_list)
         return Response(status=status.HTTP_200_OK)
 
 
@@ -154,7 +150,6 @@ class AcceptInvite(APIView):
         if not is_captain and user not in team.members.all():
             user.team = team
             user.save()
-            print(Captain.objects.filter(user=request.user).exists())
-            print(team.members.all())
+
             return Response(status=status.HTTP_200_OK)
         return Response(status=status.HTTP_400_BAD_REQUEST)

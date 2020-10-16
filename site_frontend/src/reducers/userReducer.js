@@ -12,7 +12,6 @@ const userReducer = (state = defaultState, action) => {
             return {
                 ...state,
                 loggedIn: true,
-                loading: false,
                 error: false,
                 user: {...action.payload}
             }
